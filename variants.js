@@ -8,7 +8,7 @@ export const fadeIn = (direction, delay) => {
         type: 'tween',
         duration: 1.5,
         delay: delay,
-        ease: [0.25, 0.6, 0.3, 0.8],
+        ease: [0.25, 0.5, 0.3, 0.8],
       },
     },
     show: {
