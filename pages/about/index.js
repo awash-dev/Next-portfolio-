@@ -157,7 +157,7 @@ const About = () => {
                 initial="hidden"
                 animate="show"
                 exit="hidden"
-                href="/avatar.png"
+                href="/mame cv2.pdf"
                 download
                 className=" border-2 p-1 z-30 rounded text-white transition-all duration-300 xl:z-30 hover:bg-accent hover:duration-300 hover:border-none"
               >

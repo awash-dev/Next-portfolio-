@@ -4,7 +4,6 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-
 const Work = () => {
   return (
     <div className="h-full bg-primary/30 py-36 flex items-center ">
@@ -29,19 +28,21 @@ const Work = () => {
                 exit="hidden"
                 className="mb-4 max-w-[400px] mx-auto lg:mx-0 xl:mt-10"
               >
-                lorem jeeijdncn ciofjoib nvjkhdgfUIQE GFqluvcflewfg iulqewg
-                fbnavl WYGEFWIL EGFhjvbclY GFEIYGLwfge SKHDVBAJSDYG WIRLUGFWIF
-                HDSV
+                A MERN stack workspace is ideal for creating a personal
+                portfolio website, showcasing your skills and projects.
               </motion.p>
             </div>
 
             {/* Slider */}
           </div>
-          <motion.div  variants={fadeIn("up", 0.4)}
-                initial="hidden"
-                animate="show"
-                exit="hidden" className="w-full xl:max-w-[65%]">
-            <WorkSlider/>
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full xl:max-w-[65%]"
+          >
+            <WorkSlider />
           </motion.div>
         </div>
       </div>

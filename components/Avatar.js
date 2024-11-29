@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Avatar = () => {
   return (
-    <div className="hidden  xl:flex xl:max-w-none">
+    <div className="hidden  xl:flex xl:max-w-none xl:pl-40 mt-14">
       <Image
         src={"/avatar.png"}
         width={737}

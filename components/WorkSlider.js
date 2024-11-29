@@ -13,48 +13,48 @@ const workSlides = [
   {
     images: [
       {
-        title: "title 1",
-        path: "/thumb1.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
+        title: "Top up ",
+        path: "/pu.png",
+        link: "https://github.com/awash-dev/midasbuy-clones.git",
+        web: "midasbuy-clones.vercel.app",
       },
       {
-        title: "title 2",
-        path: "/thumb2.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
-      },
-    ],
-  },
-  {
-    images: [
-      {
-        title: "title 5",
-        path: "/thumb4.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
-      },
-      {
-        title: "title 6",
-        path: "/thumb1.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
+        title: "blog",
+        path: "/blo.png",
+        link: "https://github.com/awash-dev/blog.git",
+        web: "https://awash-dev.github.io/blog",
       },
     ],
   },
   {
     images: [
       {
-        title: "title 5",
-        path: "/thumb4.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
+        title: "Portfolio",
+        path: "/port.png",
+        link: "https://github.com/awash-dev/portfolios.git",
+        web: "https://awash-dev.github.io/portfolios",
       },
       {
-        title: "title 6",
-        path: "/thumb1.jpg",
-        link: "https://github.com/awash-dev",
-        web: "https://github.com/awash-dev/next-portfolio",
+        title: "facebook clone",
+        path: "/fa.png",
+        link: "https://awash-dev.github.io/facebook-pages/",
+        web: "https://awash-dev.github.io/facebook-pages/",
+      },
+    ],
+  },
+  {
+    images: [
+      {
+        title: "MERN email",
+        path: "/em.png",
+        link: "https://github.com/awash-dev/auth-email.git",
+        web: "https://auth-email-git-main-mthackets-projects.vercel.app/",
+      },
+      {
+        title: "notcoin clone",
+        path: "/not.jpg",
+        link: "https://github.com/tab-uc-bot42",
+        web: "https://tab-uc-bot42.vercel.app/",
       },
     ],
   },

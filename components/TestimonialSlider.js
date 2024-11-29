@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination , Autoplay} from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper";
 import { FaQuoteLeft } from "react-icons/fa"; // Make sure to import this if you are using it
 
 // swiper css
@@ -11,25 +11,25 @@ import Image from "next/image";
 // testimonial data
 const testimonialData = [
   {
-    image: "/t-avt-1.png",
-    name: "Anne Smith",
-    position: "Customer",
+    image: "/fuad soft.jpg",
+    name: "Fuad Seid",
+    position: "Software engineer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "We've joined our hands on several projects, and Mohammed is one of the best people I worked with. I highly recommend his expertise to any person looking for Fullstack developments. He is the most profound person I have met, and his eagerness to learn new technologies is amazing, and his ability to tackle a problem is remarkable.",
   },
   {
-    image: "/t-avt-2.png",
-    name: "Jane Doe",
-    position: "Customer",
+    image: "/a.jpg",
+    name: "Abdo Mohammed",
+    position: "Developer",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Mohammed is exceptionally intelligent and an outstanding problem solver. I have collaborated with him on multiple projects over the past month and intend to continue utilizing his services in the future. His proficiency in Django, Flask, Next js and React js is unparalleled!",
   },
   {
-    image: "/t-avt-3.png",
-    name: "Jhon Doe",
-    position: "Customer",
+    image: "/ar.jpg",
+    name: "Argaga Mohammed",
+    position: "law",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Mohammed has an amazing approach to learning, and his progress is impressive. He is dedicated to acquiring new skills and developing them to elevate his knowledge from beginner to advanced levels. Additionally, he has a strong understanding of concepts, and the way he shares his skills helps others grasp complex topics at a deeper level.",
   },
 ];
 
@@ -43,7 +43,7 @@ const TestimonialSlider = () => {
       pagination={{
         clickable: true,
       }}
-      modules={[Navigation, Pagination,Autoplay]}
+      modules={[Navigation, Pagination, Autoplay]}
       className="h-[400px]"
     >
       {testimonialData.map((person, slideIndex) => (
@@ -54,7 +54,12 @@ const TestimonialSlider = () => {
                 {/* person image */}
 
                 <div className="mb-2 mx-auto">
-                  <Image src={person.image} width={200} height={200} className="w-[100px] h-[100px] " />
+                  <Image
+                    src={person.image}
+                    width={300}
+                    height={300}
+                    className="w-[200px] h-[200px] rounded-full "
+                  />
                 </div>
 
                 {/* person name */}

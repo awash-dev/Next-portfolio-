@@ -29,18 +29,21 @@ const Services = () => {
                 exit="hidden"
                 className="mb-4 max-w-[400px] mx-auto lg:mx-0 xl:mt-10"
               >
-                lorem jeeijdncn ciofjoib nvjkhdgfUIQE GFqluvcflewfg iulqewg
-                fbnavl WYGEFWIL EGFhjvbclY GFEIYGLwfge SKHDVBAJSDYG WIRLUGFWIF
-                HDSV
+                A MERN stack services space enhances your personal portfolio by
+                integrating various functionalities to showcase your skills
+                effectively.
               </motion.p>
             </div>
 
             {/* Slider */}
           </div>
-          <motion.div  variants={fadeIn("up", 0.4)}
-                initial="hidden"
-                animate="show"
-                exit="hidden" className="w-full xl:max-w-[65%]">
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full xl:max-w-[65%]"
+          >
             <ServiceSlider />
           </motion.div>
         </div>
