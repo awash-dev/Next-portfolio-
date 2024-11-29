@@ -57,7 +57,7 @@ const TestimonialSlider = () => {
                     src={person.image}
                     width={200} // Adjusted for mobile
                     height={200} // Adjusted for mobile
-                    className="w-[150px] h-[150px] rounded-full" // Adjusted for mobile
+                    className="w-[100px] h-[100px] xl:h-[150px] xl:w-[150px] rounded-full" // Adjusted for mobile
                   />
                 </div>
 
