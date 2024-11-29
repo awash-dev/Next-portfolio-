@@ -16,7 +16,7 @@ const workSlides = [
         title: "Top up ",
         path: "/pu.png",
         link: "https://github.com/awash-dev/midasbuy-clones.git",
-        links: "midasbuy-clones.vercel.app",
+        links: "https://midasbuy-clones.vercel.app",
       },
       {
         title: "blog",
@@ -106,7 +106,8 @@ const WorkSlider = () => {
                       <div>
                         <a
                           href={image.links}
-                   
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className="flex text-xl items-center gap-1"
                         >
                           <div>visit</div>
