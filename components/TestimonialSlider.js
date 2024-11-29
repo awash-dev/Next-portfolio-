@@ -48,41 +48,36 @@ const TestimonialSlider = () => {
     >
       {testimonialData.map((person, slideIndex) => (
         <SwiperSlide key={slideIndex}>
-          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-16">
+          <div className="flex flex-col items-center md:flex-row gap-x-8 h-full px-4 md:px-16">
             <div className="w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0">
               <div className="flex flex-col justify-center text-center">
                 {/* person image */}
-
                 <div className="mb-2 mx-auto">
                   <Image
                     src={person.image}
-                    width={300}
-                    height={300}
-                    className="w-[200px] h-[200px] rounded-full "
+                    width={200} // Adjusted for mobile
+                    height={200} // Adjusted for mobile
+                    className="w-[150px] h-[150px] rounded-full" // Adjusted for mobile
                   />
                 </div>
 
                 {/* person name */}
+                <div className="text-lg text-center">{person.name}</div>
 
-                <div className="text-lg">{person.name}</div>
-
-                {/* person experiance/skill */}
-
-                <div className="text-[12px] uppercase font-extralight tracking-widest">
+                {/* person experience/skill */}
+                <div className="text-[10px] uppercase font-extralight tracking-widest">
                   {person.position}
                 </div>
               </div>
             </div>
 
             {/* person feedback */}
-
             <div
-              className="xl:bg-pink-500/5  flex-1 flex   justify-center items-center before:w-[1px]
-             xl:before:bg-slate-200 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20"
+              className="xl:bg-pink-500/5 flex-1 flex justify-center items-center before:w-[1px] xl:before:bg-slate-200 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20"
             >
-              <di className="mb-4">
-                <FaQuoteLeft className="text-4xl text-white/20 mx-auto md:mx-0" />
-              </di>
+              <div className="mb-4">
+                <FaQuoteLeft className="text-3xl text-white/20 mx-auto md:mx-0" /> {/* Adjusted for mobile */}
+              </div>
               <div className="xl:text-lg text-center md:text-left p-0 xl:p-10">
                 {person.message}
               </div>
