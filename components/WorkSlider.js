@@ -16,13 +16,13 @@ const workSlides = [
         title: "Top up ",
         path: "/pu.png",
         link: "https://github.com/awash-dev/midasbuy-clones.git",
-        web: "midasbuy-clones.vercel.app",
+        links: "midasbuy-clones.vercel.app",
       },
       {
         title: "blog",
         path: "/blo.png",
         link: "https://github.com/awash-dev/blog.git",
-        web: "https://awash-dev.github.io/blog",
+        links: "https://awash-dev.github.io/blog",
       },
     ],
   },
@@ -32,13 +32,13 @@ const workSlides = [
         title: "Portfolio",
         path: "/port.png",
         link: "https://github.com/awash-dev/portfolios.git",
-        web: "https://awash-dev.github.io/portfolios",
+        links: "https://awash-dev.github.io/portfolios",
       },
       {
         title: "facebook clone",
         path: "/fa.png",
         link: "https://awash-dev.github.io/facebook-pages/",
-        web: "https://awash-dev.github.io/facebook-pages/",
+        links: "https://awash-dev.github.io/facebook-pages/",
       },
     ],
   },
@@ -48,13 +48,13 @@ const workSlides = [
         title: "MERN email",
         path: "/em.png",
         link: "https://github.com/awash-dev/auth-email.git",
-        web: "https://auth-email-git-main-mthackets-projects.vercel.app/",
+        links: "https://auth-email-git-main-mthackets-projects.vercel.app/",
       },
       {
         title: "notcoin clone",
         path: "/not.jpg",
         link: "https://github.com/tab-uc-bot42",
-        web: "https://tab-uc-bot42.vercel.app/",
+        links: "https://tab-uc-bot42.vercel.app/",
       },
     ],
   },
@@ -105,7 +105,7 @@ const WorkSlider = () => {
                       </div>
                       <div>
                         <a
-                          href={image.web}
+                          href={image.links}
                    
                           className="flex text-xl items-center gap-1"
                         >
