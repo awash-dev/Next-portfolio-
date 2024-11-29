@@ -106,7 +106,7 @@ const WorkSlider = () => {
                       <div>
                         <a
                           href={image.web}
-                          target="_blank"
+                          
                           rel="noopener noreferrer"
                           className="flex text-xl items-center gap-1"
                         >
