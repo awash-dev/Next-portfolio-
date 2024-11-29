@@ -15,7 +15,7 @@ const testimonialData = [
     name: "Fuad Seid",
     position: "Software engineer",
     message:
-      "We've joined our hands on several projects, and Mohammed is one of the best people I worked with. I highly recommend his expertise to any person looking for Fullstack developments. He is the most profound person I have met, and his eagerness to learn new technologies is amazing, and his ability to tackle a problem is remarkable.",
+      "We've joined our hands on several projects, and Mohammed is one of the best people I worked with. I highly recommend his expertise to any person looking for Fullstack developments. He is the most profound person I have met, and his eagerness to learn new technologies is amazing.",
   },
   {
     image: "/a.jpg",
@@ -29,7 +29,7 @@ const testimonialData = [
     name: "Argaga Mohammed",
     position: "law",
     message:
-      "Mohammed has an amazing approach to learning, and his progress is impressive. He is dedicated to acquiring new skills and developing them to elevate his knowledge from beginner to advanced levels. Additionally, he has a strong understanding of concepts, and the way he shares his skills helps others grasp complex topics at a deeper level.",
+      "Mohammed has an amazing approach to learning, and his progress is impressive. He is dedicated to acquiring new skills and developing them to elevate his knowledge from beginner to advanced levels.",
   },
 ];
 
