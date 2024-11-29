@@ -96,7 +96,7 @@ const WorkSlider = () => {
                       <div>{image.title}</div>
                       <div>
                         <a
-                          className="flex items-center gap-2 text-xl "
+                          className="flex items-center gap-2 text-xl"
                           href={image.link}
                         >
                           <div>view code </div>
