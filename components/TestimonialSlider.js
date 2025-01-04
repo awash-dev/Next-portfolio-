@@ -18,7 +18,7 @@ const testimonialData = [
       "We've joined our hands on several projects, and Mohammed is one of the best people I worked with. I highly recommend his expertise to any person looking for Fullstack developments. He is the most profound person I have met, and his eagerness to learn new technologies is amazing.",
   },
   {
-    image: "/a.jpg",
+    image: "IMG_20250104_230210_081.jpg",
     name: "Abdo Mohammed",
     position: "Developer",
     message:
