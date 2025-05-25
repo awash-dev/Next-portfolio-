@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
 import CountUp from "react-countup";
 import {
   SiNextdotjs,
-  SiFramer,
+  SiFramer,  
   SiAdobexd,
   SiFlask,
   SiExpress,
