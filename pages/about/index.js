@@ -179,7 +179,7 @@ const About = () => {
                 {/* experience */}
                 <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-3xl font-extrabold text-accent mb-2">
-                    <CountUp start={-2} end={2} duration={10} />+
+                    <CountUp start={-6} end={5} duration={10} />+
                   </div>
                   <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ">
                     years of experience
@@ -188,7 +188,7 @@ const About = () => {
                 {/* Clients */}
                 <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-3xl font-extrabold text-accent mb-2">
-                    <CountUp start={-1} end={6} duration={10} />+
+                    <CountUp start={-1} end={2} duration={10} />+
                   </div>
                   <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ">
                     Clients
@@ -197,7 +197,7 @@ const About = () => {
                 {/* Finished Projects */}
                 <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                   <div className="text-2xl xl:text-3xl font-extrabold text-accent mb-2">
-                    <CountUp start={0} end={28} duration={10} />+
+                    <CountUp start={0} end={63} duration={10} />+
                   </div>
                   <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] ">
                     Finished Projects
