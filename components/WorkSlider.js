@@ -93,7 +93,7 @@ const WorkSlider = () => {
                 <div className="flex items-center justify-center relative overflow-hidden w-full h-full">
                   <Image
                     src={image.path}
-                    width={500}
+                    width={300}
                     height={300}
                     alt={image.title}
                     className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110"
