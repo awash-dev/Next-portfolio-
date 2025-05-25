@@ -1,23 +1,14 @@
-// pages/index.js (or any other page component)
-import Head from 'next/head'; // Import Head from next/head
 import Image from 'next/image'; // Import Image for images
 
 const HomePage = () => {
   return (
     <>
-      <Head>
-        {/* Page Title */}
-        <title>My Awesome Portfolio - Home</title>
-        {/* Page Description for SEO */}
-        <meta name="description" content="Welcome to my full-stack developer portfolio. Discover my projects and skills." />
-        {/* Open Graph / Social Media Meta Tags */}
-        <meta property="og:title" content="Mohammed Portfolio" />
-        <meta property="og:description" content="Welcome to my full-stack developer portfolio. Discover my projects and skills." />
-        <meta property="og:image" content="/avatar.png" /> {/* Path to your social media preview image */}
-        <meta property="og:url" content="https://awash-port.vercel.app/ />
-       
-        {/* Twitter Card Meta Tags */}
-      </Head>
+      <head>
+                    <title>Mohammed portfolio</title>
+                    <meta name="description" content="Amibera Dashboard Loading..." />
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                    <link rel="icon" href="/avatar.png" />
+                </head>
 
       {/* Rest of your page content */}
       <h1>Welcome to my portfolio!</h1>
