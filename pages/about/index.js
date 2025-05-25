@@ -4,7 +4,7 @@ import { FaHtml5, FaCss3, FaJs, FaReact, FaFigma } from "react-icons/fa";
 import CountUp from "react-countup";
 import {
   SiNextdotjs,
-  SiFramer,  
+  SiFramer,
   SiAdobexd,
   SiFlask,
   SiExpress,
@@ -18,7 +18,8 @@ import {
   SiMysql,
 } from "react-icons/si";
 import { useState } from "react";
-//  data
+
+// data
 const aboutData = [
   {
     title: "skills",
@@ -56,26 +57,28 @@ const aboutData = [
       },
     ],
   },
-  // parcipation and reward program
-
+  // Project Experience
   {
-    title: "awards",
+    title: "experience", // Changed from "awards" to "experience"
     info: [
       {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
+        title: "Awash Shop E-commerce Platform",
+        stage: "2023", // Example year, adjust as needed
       },
       {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
+        title: "Mo7 Top-up System Integration",
+        stage: "2022", // Example year, adjust as needed
       },
+      {
+        title: "Ameibera Dashboard Development",
+        stage: "2022-2023", // Example year range, adjust as needed
+      },
+      // You can add more specific project experiences here
     ],
   },
-
-  //work diffrent types of company name
-
+  // Previous Work Experience (Keeping this as "experience" for company names)
   {
-    title: "experience",
+    title: "work", // Changed from "experience" to "work" to differentiate
     info: [
       {
         title: "UX/UI Designer - XYZ Company",
@@ -91,8 +94,7 @@ const aboutData = [
       },
     ],
   },
-  // i get cirtfication
-
+  // certifications
   {
     title: "credentials",
     info: [
@@ -116,6 +118,7 @@ import Circles from "../../components/Circles";
 import Avatar from "../../components/Avatar";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
+
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
@@ -132,7 +135,7 @@ const About = () => {
         <Avatar />
       </motion.div>
 
-      <div className="container mx-auto h-full flex flex-col  items-center xl:flex-row xl:pl-56  gap-x-6 xl:z-30 z-30">
+      <div className="container mx-auto h-full flex flex-col items-center xl:flex-row xl:pl-56 gap-x-6 xl:z-30 z-30">
         {/* About me */}
         <motion.div
           variants={fadeIn("right", 0.4)}
@@ -147,9 +150,8 @@ const About = () => {
           <div className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 capitalize flex flex-col gap-4 gap-y-8">
             <div>
               Hi there !👋 I'M &nbsp;
-              <strong className="text-white">
-                Mohammed Hussen
-              </strong> <br /> am fullstack web developer
+              <strong className="text-white">Mohammed Hussen</strong> <br /> am
+              fullstack web developer
             </div>
             <div>
               <motion.a
@@ -221,7 +223,7 @@ const About = () => {
                 return (
                   <div
                     key={indexs}
-                    className={`  ${
+                    className={` ${
                       index === indexs &&
                       "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300 "
                     } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0 z-[999]`}
@@ -252,10 +254,12 @@ const About = () => {
                   <div>{item.title}</div>
                   <div className="hidden xl:flex">-</div>
                   <div>{item.stage}</div>
-                  <div className="flex   gap-x-4">
+                  <div className="flex gap-x-4">
                     {item.icons?.map((icon, Index) => {
                       return (
-                        <div className="text-2xl transition-all">{icon}</div>
+                        <div key={Index} className="text-2xl transition-all">
+                          {icon}
+                        </div>
                       );
                     })}
                   </div>
