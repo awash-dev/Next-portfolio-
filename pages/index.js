@@ -81,7 +81,7 @@ const Home = () => {
       {/* Background visuals (Container for other visual effects) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {/* Explosion effect (Correctly placed here) */}
-        <div className="hidden xl:block absolute right-0 bottom-0 w-full h-full bg-right bg-no-repeat bg-explosion mix-blend-color-dodge z-0" />
+        <div/>
 
         {/* Particles */}
         <ParticlesContainer />
