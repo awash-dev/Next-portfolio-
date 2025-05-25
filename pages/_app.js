@@ -12,12 +12,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <html lang="en">
             <head>
-                <title>Amibera Dashboard</title>
-                <meta name="description" content="Amibera Dashboard Application" />
-                <meta name="keywords" content="dashboard, amibera, furniture" />
+                <title>MOhammed Portfolio's </title>
+                <meta name="description" content="Mohammed Portfolio Application" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta charSet="utf-8" />
-                <link rel="icon" href="/icons.jpg" />
+                <link rel="icon" href="/avatar.png" />
             </head>
             <body >
        <Layout>
