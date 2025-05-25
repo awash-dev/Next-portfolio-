@@ -38,7 +38,7 @@ const Home = () => {
 
   return (
     <div className="relative h-full bg-primary/60 overflow-hidden">
-      {/* Background gradient */}
+      {/* Background gradient (This should be the primary full-screen background) */}
       <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-black/30 to-black/10 z-0" />
 
       <div className="relative z-10 container mx-auto h-full flex flex-col justify-center text-center xl:text-left xl:pt-40">
@@ -78,9 +78,9 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Background visuals */}
+      {/* Background visuals (Container for other visual effects) */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
-        {/* Explosion effect */}
+        {/* Explosion effect (Correctly placed here) */}
         <div className="hidden xl:block absolute right-0 bottom-0 w-full h-full bg-right bg-no-repeat bg-explosion mix-blend-color-dodge z-0" />
 
         {/* Particles */}
