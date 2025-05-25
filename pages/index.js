@@ -1,5 +1,5 @@
-// Next.js Image component
-import Image from "next/image";
+// bg is w-full screen // Next.js Image component
+import Image from "next/image"; // Note: Image component is imported but not used in the provided snippet
 
 // Components
 import ParticlesContainer from "../components/ParticlesContainer";
@@ -8,7 +8,7 @@ import ProjectsBtn from "../components/ProjectsBtn";
 
 // Framer Motion
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
+import { fadeIn } from "../variants"; // Assuming variants.js contains the fadeIn animation
 
 const motivationalPhrases = [
   "Code Your Dreams <br /> Into Reality",
@@ -47,8 +47,8 @@ const Home = () => {
           exit="hidden"
           className="text-lg text-gray-300 max-w-xl mx-auto xl:mx-0 mb-10 xl:mb-16"
         >
-          Crafting modern applications using Java, JavaScript, SQL Server, and NoSQL. 
-          We build microservices and APIs (SOA, SOAP, REST, XML) with seamless deployment 
+          Crafting modern applications using Java, JavaScript, SQL Server, and NoSQL.
+          We build microservices and APIs (SOA, SOAP, REST, XML) with seamless deployment
           on cloud platforms like Cloud Foundry.
         </motion.p>
 
@@ -69,7 +69,7 @@ const Home = () => {
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         {/* Explosion effect */}
         <div className="hidden xl:block absolute right-0 bottom-0 w-full h-full bg-right bg-no-repeat bg-explosion mix-blend-color-dodge z-0" />
-        
+
         {/* Particles */}
         <ParticlesContainer />
 
