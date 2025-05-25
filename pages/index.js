@@ -19,9 +19,22 @@ const motivationalPhrases = [
   "Turning Concepts <br /> Into Code",
 ];
 
+const energyTechQuotes = [
+  "Fueling Innovation <br /> With Every Line",
+  "Electrifying Ideas <br /> Through Technology",
+  "The Future is Coded, <br /> The Energy is Digital",
+  "Powering Progress <br /> One Algorithm at a Time",
+  "Unleash the Byte, <br /> Ignite the Future",
+  "Where Code Meets <br /> Infinite Possibilities",
+];
+
 const Home = () => {
+  // Combine all phrases/quotes into a single array for random selection
+  const allDisplayPhrases = [...motivationalPhrases, ...energyTechQuotes];
+
+  // Select a random phrase/quote from the combined list
   const randomPhrase =
-    motivationalPhrases[Math.floor(Math.random() * motivationalPhrases.length)];
+    allDisplayPhrases[Math.floor(Math.random() * allDisplayPhrases.length)];
 
   return (
     <div className="relative h-full bg-primary/60 overflow-hidden">
