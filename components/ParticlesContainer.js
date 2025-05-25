@@ -19,119 +19,93 @@ const ParticlesContainer = () => {
         fullScreen: { enable: false }, // Set to false as you're likely embedding it in a container
         background: {
           color: {
-            value: "", // Keep background transparent to see your existing website background
+            value: "", // Keep background transparent
           },
         },
         fps_limit: 120,
         interactivity: {
           events: {
             onClick: {
-              enable: true, // Enable click to see an effect, perhaps a "push"
-              mode: "push",
+              enable: true,
+              mode: "push", // Still enable push on click
             },
             onHover: {
               enable: true,
-              // Try 'repulse' for a swirling/wind-like push effect,
-              // or 'attract' to draw them in.
-              // 'bubble' can also create interesting size/opacity changes.
-              mode: "repulse",
+              mode: "grab", // Set hover mode to 'grab' for spider net effect
             },
             resize: true,
           },
           modes: {
             push: {
-              quantity: 4, // Number of particles to add on click
+              quantity: 4,
             },
-            repulse: {
-              distance: 150, // How far particles are pushed away
-              duration: 0.8, // How long the effect lasts
+            grab: {
+              distance: 180, // Distance for particles to connect to cursor
+              links: {
+                opacity: 1, // Make links fully opaque when grabbed
+                color: "#ffffff", // Change link color on hover for highlight (e.g., white)
+                blink: false, // Optional: make them blink
+                consent: false,
+                // Add more properties for links on grab if desired, e.g., width
+                width: 2, // Make grabbed links a bit thicker
+              },
             },
-            attract: {
+            repulse: { // Keep repulse configured if you want to switch to it later or combine modes
               distance: 150,
               duration: 0.8,
-              speed: 1, // How fast particles are pulled
             },
-            // 'grab' mode (already present) is good for the "spider net" lines
-            grab: {
-              distance: 200, // Distance for lines to appear
-              links: {
-                opacity: 1, // Make links more visible when grabbed
-              },
+            attract: { // Keep attract configured
+              distance: 150,
+              duration: 0.8,
+              speed: 1,
             },
           },
         },
         particles: {
           color: {
-            value: "#e68e2e", // Particle color (your accent color)
+            value: "#e68e2e", // Particle color
           },
           links: {
-            color: "#f5d393", // Link color (a lighter accent)
-            distance: 150, // Max distance for particles to link
-            enable: true, // Essential for the "spider net" effect
-            opacity: 0.6, // Opacity of the links
-            width: 1, // Width of the links
+            color: "#f5d393", // Default link color when not hovered
+            distance: 150,
+            enable: true,
+            opacity: 0.6,
+            width: 1,
           },
           collisions: {
-            enable: true, // Particles bounce off each other
+            enable: true,
           },
           move: {
             direction: "none",
             enable: true,
             outModes: {
-              default: "bounce", // Particles bounce off canvas edges
+              default: "bounce",
             },
             random: false,
-            speed: 1, // General movement speed
+            speed: 1,
             straight: false,
-            // Add properties for more dynamic movement
             attract: {
-              enable: false, // This is for constant attraction, usually off
+              enable: false,
               rotateX: 600,
               rotateY: 1200,
             },
             decay: 0,
-            // trail: {
-            //   enable: true, // Can create a "wind" like tail effect
-            //   length: 5,
-            //   fill: {
-            //     color: {
-            //       value: "#000000" // Color of the trail
-            //     }
-            //   }
-            // },
-            gravity: {
-              enable: false,
-              maxSpeed: 50,
-            },
-            path: {
-              clamp: true,
-              delay: {
-                value: 0,
-              },
-              enable: false,
-            },
-            // spin: { // Could create a spinning effect if enabled
-            //   acceleration: 0,
-            //   enable: false,
-            // },
-            // If you want a more "swarm" or "wind" like flow,
-            // consider enabling flow or path effects, or adjusting attract/repulse settings.
           },
           number: {
             density: {
               enable: true,
               area: 800,
             },
-            value: 80, // Number of particles
+            value: 80,
           },
           opacity: {
-            value: 0.5, // Particle opacity
+            value: 0.5,
           },
           shape: {
-            type: "circle", // Particles are circles
+            type: "circle",
           },
           size: {
-            value: { min: 1, max: 5 }, // Random size for particles
+            value: { min: 1, max: 5 },
           },
         },
         detectRetina: true,
