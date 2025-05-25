@@ -1,29 +1,38 @@
-import Image from 'next/image'; // Import Image for images
+import "../styles/globals.css"; 
+import Transition from "../components/Transition";
 
-const HomePage = () => {
+import Layout from "../components/Layout";
+// next router js
+import { useRouter } from "next/router";
+// framer Motion
+ 
+import { AnimatePresence, motion } from "framer-motion";
+function MyApp({ Component, pageProps }) {
+  const router = useRouter();
   return (
-    <>
-      <head>
-                    <title>Mohammed portfolio</title>
-                    <meta name="description" content="Amibera Dashboard Loading..." />
-                    <meta name="viewport" content="width=device-width, initial-scale=1" />
-                    <link rel="icon" href="/avatar.png" />
-                </head>
+    <html lang="en">
+            <head>
+                <title>Amibera Dashboard</title>
+                <meta name="description" content="Amibera Dashboard Application" />
+                <meta name="keywords" content="dashboard, amibera, furniture" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta charSet="utf-8" />
+                <link rel="icon" href="/icons.jpg" />
+            </head>
+            <body >
+       <Layout>
+      <AnimatePresence mode="wait">
+        <motion.div key={router.route} className="h-full">
+          <Transition />
+          <Component {...pageProps} />
+        </motion.div>
+      </AnimatePresence>
+    </Layout>
+            </body>
+        </html>
 
-      {/* Rest of your page content */}
-      <h1>Welcome to my portfolio!</h1>
-      <p>This is the main content of the home page.</p>
-
-      {/* Example of using next/image */}
-      <Image
-        src="/images/my-hero-image.jpg" // Path to your image in the public folder
-        alt="A description of the image"
-        width={500} // Original width of the image
-        height={300} // Original height of the image
-        priority // Optional: loads this image sooner if it's above the fold
-      />
-    </>
+   
   );
-};
+}
 
-export default HomePage;
+export default MyApp;
