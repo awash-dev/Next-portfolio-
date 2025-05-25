@@ -24,6 +24,18 @@ const workSlides = [
         link: "https://github.com/awash-dev/blog.git",
         liveLink: "https://awash-dev.github.io/blog",
       },
+      {
+        title: "E-commerce Shop", // Added a third image for the 4-column grid example
+        path: "/ecom.png", // Replace with an actual path
+        link: "https://github.com/your-repo/ecommerce",
+        liveLink: "https://your-ecommerce-live.com",
+      },
+      {
+        title: "Dashboard UI", // Added a fourth image
+        path: "/dash.png", // Replace with an actual path
+        link: "https://github.com/your-repo/dashboard",
+        liveLink: "https://your-dashboard-live.com",
+      },
     ],
   },
   {
@@ -40,10 +52,6 @@ const workSlides = [
         link: "https://awash-dev.github.io/facebook-pages/",
         liveLink: "https://awash-dev.github.io/facebook-pages/",
       },
-    ],
-  },
-  {
-    images: [
       {
         title: "MERN Email Auth",
         path: "/em.png",
@@ -58,6 +66,7 @@ const workSlides = [
       },
     ],
   },
+  // Add more slides or images as needed to fill the 4-column grid
 ];
 
 const WorkSlider = () => {
@@ -69,11 +78,13 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[180px] sm:h-[480px]"
+      // Set a fixed height here, e.g., 'h-[400px]' or 'h-[550px]' based on your design
+      className="h-[400px] sm:h-[480px] lg:h-[550px]" // Adjusted heights for better fit with 4 columns
     >
       {workSlides.map((slide, slideIndex) => (
         <SwiperSlide key={slideIndex}>
-          <div className="grid grid-cols-2 grid-rows-2 gap-4 cursor-pointer">
+          {/* Changed grid-cols-2 to grid-cols-4 */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 h-full"> {/* Added h-full to grid */}
             {slide.images.map((image, imageIndex) => (
               <div
                 key={imageIndex}
@@ -85,7 +96,7 @@ const WorkSlider = () => {
                     width={500}
                     height={300}
                     alt={image.title}
-                    className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110" // Added object-cover and scaling
+                    className="object-cover w-full h-full transition-all duration-300 group-hover:scale-110"
                   />
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
