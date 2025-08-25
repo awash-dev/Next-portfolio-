@@ -10,10 +10,10 @@ exports.id = "vendor-chunks/swiper";
 exports.ids = ["vendor-chunks/swiper"];
 exports.modules = {
 
-/***/ "./node_modules/swiper/modules/free-mode/free-mode.min.css":
-/*!*****************************************************************!*\
-  !*** ./node_modules/swiper/modules/free-mode/free-mode.min.css ***!
-  \*****************************************************************/
+/***/ "./node_modules/swiper/modules/navigation/navigation.min.css":
+/*!*******************************************************************!*\
+  !*** ./node_modules/swiper/modules/navigation/navigation.min.css ***!
+  \*******************************************************************/
 /***/ (() => {
 
 

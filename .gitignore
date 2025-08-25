@@ -13,3 +13,10 @@ modern.jsonp
 resources/sass/.sass-cache/
 resources/.arch-internal-preview.css
 .arch-internal-preview.css
+
+.next
+.package-lock.json
+
+*node_modules/
+
+node_modules

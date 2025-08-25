@@ -11,102 +11,48 @@ const ParticlesContainer = () => {
 
   return (
     <Particles
-      className="w-full h-full absolute translate-z-0"
+      className="w-full h-full absolute translate-z-0 z-0 pointer-events-none"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
       options={{
-        fullScreen: { enable: false }, // Set to false as you're likely embedding it in a container
-        background: {
-          color: {
-            value: "", // Keep background transparent
-          },
-        },
+        fullScreen: { enable: false },
+        background: { color: { value: "" } },
         fps_limit: 120,
         interactivity: {
           events: {
-            onClick: {
-              enable: true,
-              mode: "push", // Still enable push on click
-            },
-            onHover: {
-              enable: true,
-              mode: "grab", // Set hover mode to 'grab' for spider net effect
-            },
+            onClick: { enable: true, mode: "push" },
+            onHover: { enable: true, mode: "grab" },
             resize: true,
           },
           modes: {
-            push: {
-              quantity: 4,
-            },
+            push: { quantity: 4 },
             grab: {
-              distance: 180, // Distance for particles to connect to cursor
-              links: {
-                opacity: 1, // Make links fully opaque when grabbed
-                color: "#ffffff", // Change link color on hover for highlight (e.g., white)
-                blink: false, // Optional: make them blink
-                consent: false,
-                // Add more properties for links on grab if desired, e.g., width
-                width: 2, // Make grabbed links a bit thicker
-              },
+              distance: 180,
+              links: { opacity: 1, color: "#ffffff", width: 2, blink: false, consent: false },
             },
-            repulse: { // Keep repulse configured if you want to switch to it later or combine modes
-              distance: 150,
-              duration: 0.8,
-            },
-            attract: { // Keep attract configured
-              distance: 150,
-              duration: 0.8,
-              speed: 1,
-            },
+            repulse: { distance: 150, duration: 0.8 },
+            attract: { distance: 150, duration: 0.8, speed: 1 },
           },
         },
         particles: {
-          color: {
-            value: "#e68e2e", // Particle color
-          },
-          links: {
-            color: "#f5d393", // Default link color when not hovered
-            distance: 150,
-            enable: true,
-            opacity: 0.6,
-            width: 1,
-          },
-          collisions: {
-            enable: true,
-          },
+          color: { value: "#e68e2e" },
+          links: { color: "#f5d393", distance: 150, enable: true, opacity: 0.6, width: 1 },
+          collisions: { enable: true },
           move: {
             direction: "none",
             enable: true,
-            outModes: {
-              default: "bounce",
-            },
+            outModes: { default: "bounce" },
             random: false,
             speed: 1,
             straight: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200,
-            },
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
             decay: 0,
           },
-          number: {
-            density: {
-              enable: true,
-              area: 800,
-            },
-            value: 80,
-          },
-          opacity: {
-            value: 0.5,
-          },
-          shape: {
-            type: "circle",
-          },
-          size: {
-            value: { min: 1, max: 5 },
-          },
+          number: { density: { enable: true, area: 800 }, value: 80 },
+          opacity: { value: 0.5 },
+          shape: { type: "circle" },
+          size: { value: { min: 1, max: 5 } },
         },
         detectRetina: true,
       }}
