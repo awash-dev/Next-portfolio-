@@ -143,7 +143,7 @@ const Services = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[70%] -mt-10 xl:-mt-0 h-full flex items-center"
+            className="w-full xl:max-w-[70%] h-full flex items-center"
           >
             <Swiper
               modules={[Pagination, Autoplay]}

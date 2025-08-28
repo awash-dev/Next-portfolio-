@@ -8,63 +8,74 @@ import Circles from "../../components/Circles";
 const projectsData = [
   {
     id: 1,
-    title: "E-Commerce Platform",
+    title: "Amibara Store",
     description: "Full-stack e-commerce with payment integration.",
-    image: "/project1.jpg",
-    technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    category: "web",
+    image: "/store.jpg",
+    technologies: ["React Native", "Firebase", "Clerk"],
+    category: "Mobile",
     link: "#",
-    github: "#",
+    github: "https://github.com/awash-dev",
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "Productivity app with drag-and-drop interface.",
-    image: "/project2.jpg",
-    technologies: ["React Native", "Firebase", "Redux"],
-    category: "mobile",
-    link: "#",
-    github: "#",
+    title: "Dynamic Blog",
+    description: "A dynamic blog built with Next.js and Tailwind CSS.",
+    image: "/blogs.png",
+    technologies: ["Next.js", "Tailwind CSS", "PostgreSQL"],
+    category: "Web",
+    link: "https://mame-journey.vercel.app/",
+    github: "https://github.com/awash-dev",
   },
   {
     id: 3,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard with real-time metrics.",
-    image: "/project3.jpg",
-    technologies: ["Next.js", "Tailwind CSS", "Chart.js"],
-    category: "dashboard",
-    link: "#",
-    github: "#",
+    title: "School Attendance System",
+    description: "A school attendance system with real-time tracking.",
+    image: "/school-atendance.png",
+    technologies: ["Next.js", "Tailwind CSS", "Chart.js", "Clerk", "Firebase"],
+    category: "Dashboard",
+    link: "https://scholls-admin.vercel.app/",
+    github: "https://github.com/awash-dev/scholls-admin",
   },
   {
     id: 4,
-    title: "Restaurant Booking System",
-    description: "Reservation system with table management.",
-    image: "/project4.jpg",
-    technologies: ["Vue.js", "Express", "MySQL"],
-    category: "web",
-    link: "#",
-    github: "#",
+    title: "Awash Tube API",
+    description: "YouTube API integration for video fetching from YouTube.",
+    image: "/youtube-api.png",
+    technologies: ["Vite.js", "Google Cloud", "YouTube Data API"],
+    category: "Web",
+    link: "https://awash-tube-api-qwuj.vercel.app/",
+    github: "https://github.com/awash-dev/AwashTubeApi",
   },
   {
     id: 5,
-    title: "Fitness Tracking App",
-    description: "Mobile app for workout tracking.",
-    image: "/project5.jpg",
-    technologies: ["React Native", "GraphQL", "MongoDB"],
-    category: "mobile",
-    link: "#",
-    github: "#",
+    title: "E-learning Dashboard",
+    description:
+      "A comprehensive dashboard for managing e-learning courses and users.",
+    image: "/e-learnig-dash.png",
+    technologies: ["Vite.js", "Clerk", "MongoDB", "Chart.js"],
+    category: "Dashboard",
+    link: "https://builder-neon-landing.vercel.app/admin",
+    github: "https://github.com/awash-dev",
   },
   {
     id: 6,
-    title: "Portfolio Website",
-    description: "Personal portfolio with project showcase.",
-    image: "/project6.jpg",
-    technologies: ["Next.js", "Framer Motion", "Tailwind CSS"],
-    category: "web",
+    title: "Digital Lab",
+    description: "A virtual lab environment for conducting experiments.",
+    image: "/digital-lab.png",
+    technologies: ["HTML", "JavaScript", "CSS"],
+    category: "Web",
+    link: "https://awash-dev.github.io/library/",
+    github: "https://github.com/awash-dev/library",
+  },
+  {
+    id: 7,
+    title: "Amibara Furniture",
+    description: "Full-stack e-commerce with payment integration.",
+    image: "/furniture.jpg",
+    technologies: ["React Native", "Firebase", "Clerk"],
+    category: "Mobile",
     link: "#",
-    github: "#",
+    github: "https://github.com/awash-dev",
   },
 ];
 
@@ -83,7 +94,9 @@ const Work = () => {
   const filteredProjects =
     activeFilter === "all"
       ? projectsData
-      : projectsData.filter((project) => project.category === activeFilter);
+      : projectsData.filter(
+          (project) => project.category.toLowerCase() === activeFilter
+        );
 
   return (
     <div className="h-full bg-primary/30 py-12 flex items-center overflow-hidden relative">
@@ -153,7 +166,7 @@ const Work = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="w-full xl:max-w-[80%] overflow-y-auto max-h-[calc(100vh-80px)]" // Added scrolling and height constraints
+            className="w-full xl:max-w-[80%] overflow-y-auto max-h-[calc(100vh-80px)]"
           >
             {/* Mobile Filter - Only visible on small screens */}
             <motion.div
@@ -192,13 +205,13 @@ const Work = () => {
                   animate="show"
                   className="bg-gradient-to-br from-gray-900/70 to-gray-800/40 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10 hover:border-accent/30 transition-all group h-full flex flex-col"
                 >
-                  {/* Project Image - Reduced Height */}
+                  {/* Project Image - Updated to use <img> */}
                   <div className="h-36 overflow-hidden relative">
-                    <div className="w-full h-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center">
-                      <span className="text-2xl text-white/30">
-                        Project {project.id}
-                      </span>
-                    </div>
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-contain"
+                    />
                     <div className="absolute top-2 right-2">
                       <span className="text-xs bg-accent/90 text-white px-2 py-1 rounded-full">
                         {project.category}
