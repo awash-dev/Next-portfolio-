@@ -4,7 +4,7 @@ import { fadeIn } from "../../variants";
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
 
-// Project data
+// Project data with absolute paths for Vercel
 const projectsData = [
   {
     id: 1,
@@ -89,6 +89,7 @@ const filterOptions = [
 
 const Work = () => {
   const [activeFilter, setActiveFilter] = useState("all");
+  const [imageErrors, setImageErrors] = useState({});
 
   // Filter projects based on active filter
   const filteredProjects =
@@ -97,6 +98,11 @@ const Work = () => {
       : projectsData.filter(
           (project) => project.category.toLowerCase() === activeFilter
         );
+
+  // Handle image loading errors
+  const handleImageError = (id) => {
+    setImageErrors(prev => ({ ...prev, [id]: true }));
+  };
 
   return (
     <div className="h-full bg-primary/30 py-12 flex items-center overflow-hidden relative">
@@ -205,13 +211,23 @@ const Work = () => {
                   animate="show"
                   className="bg-gradient-to-br from-gray-900/70 to-gray-800/40 rounded-xl overflow-hidden backdrop-blur-sm border border-white/10 hover:border-accent/30 transition-all group h-full flex flex-col"
                 >
-                  {/* Project Image - Updated to use <img> */}
-                  <div className="h-36 overflow-hidden relative">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-full object-contain"
-                    />
+                  {/* Project Image with error handling */}
+                  <div className="h-36 overflow-hidden relative bg-gray-800/50 flex items-center justify-center">
+                    {!imageErrors[project.id] ? (
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-contain"
+                        onError={() => handleImageError(project.id)}
+                      />
+                    ) : (
+                      <div className="text-white/60 text-sm flex flex-col items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>Image not available</span>
+                      </div>
+                    )}
                     <div className="absolute top-2 right-2">
                       <span className="text-xs bg-accent/90 text-white px-2 py-1 rounded-full">
                         {project.category}
@@ -253,12 +269,16 @@ const Work = () => {
                       <a
                         href={project.link}
                         className="flex-1 bg-accent hover:bg-accent/90 text-white text-center py-1 rounded transition-colors text-xs"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         View
                       </a>
                       <a
                         href={project.github}
                         className="flex-1 bg-white/10 hover:bg-white/20 text-white text-center py-1 rounded transition-colors text-xs"
+                        target="_blank"
+                        rel="noopener noreferrer"
                       >
                         Code
                       </a>
