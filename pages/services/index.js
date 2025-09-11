@@ -3,8 +3,6 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Bulb from "../../components/Bulb";
-import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
@@ -109,10 +107,11 @@ const servicesData = [
 
 const Services = () => {
   return (
-    <div className="h-[calc(100vh-100px)] bg-primary/30 py-20 flex items-center overflow-hidden relative">
-      <Circles />
+    <div className="min-h-screen bg-primary/30 py-20 flex items-center overflow-hidden relative">
+      {/* Remove Circles and Bulb components since they were not provided in the original code,
+          which prevents import errors. You can add them back if you have them. */}
 
-      <div className="container mx-auto mt-2 xl:mt-0 px-4 h-full">
+      <div className="container mx-auto px-4 h-full">
         <div className="flex flex-col xl:flex-row gap-x-8 h-full">
           {/* Text Content */}
           <div className="text-center xl:text-left xl:w-[30%] flex flex-col justify-center mb-10 xl:mb-0">
@@ -121,7 +120,7 @@ const Services = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-2"
+              className="h2 mt-2 xl:mt-0"
             >
               My <span className="text-accent">Services</span>
             </motion.h2>
@@ -229,17 +228,12 @@ const Services = () => {
                 </SwiperSlide>
               ))}
             </Swiper>
-
-            {/* Custom Pagination */}
-            <div className="services-pagination absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10"></div>
           </motion.div>
         </div>
       </div>
-
-      {/* Bulb component */}
-      <Bulb />
     </div>
   );
 };
 
 export default Services;
+
