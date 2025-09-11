@@ -4,6 +4,7 @@ import { IoLogoAndroid } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import { FaAppStoreIos, FaRegCopy } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
+
 // swiper js
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper";
@@ -59,8 +60,16 @@ const ServiceSlider = () => {
           spaceBetween: 15,
         },
         640: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30,
         },
       }}
       freeMode={true}
@@ -68,7 +77,7 @@ const ServiceSlider = () => {
         clickable: true,
       }}
       modules={[FreeMode, Pagination]}
-      className="h-[240px] sm:h-[340px]"
+      className="h-[340px] sm:h-[480px] lg:h-[340px]"
     >
       {serviceData.map((item, index) => (
         <SwiperSlide key={index}>
@@ -77,14 +86,15 @@ const ServiceSlider = () => {
             <div className="text-4xl text-accent mb-4">{item.icon}</div>
 
             {/* title && description */}
-            <div>
-              <div className="font-bold text-lg">{item.title}</div>
-              <p className="mb-4 max-w-[400px] mx-auto lg:mx-0">
+            <div className="flex-grow">
+              <div className="font-bold text-lg mb-2">{item.title}</div>
+              <p className="text-sm text-gray-400">
                 {item.description}
               </p>
             </div>
+            
             {/* arrow */}
-            <div className="text-3xl">
+            <div className="text-3xl mt-4">
               <RxArrowTopRight className="group-hover:rotate-45 group-hover:text-accent transition-all duration-300" />
             </div>
           </div>
@@ -95,3 +105,4 @@ const ServiceSlider = () => {
 };
 
 export default ServiceSlider;
+
