@@ -5,53 +5,62 @@ import {
   RiFacebookBoxLine,
   RiLinkedinLine,
   RiTwitterLine,
+  RiBriefcaseLine,
 } from "react-icons/ri";
+
+const socials = [
+  {
+    href: "https://youtube.com/@awash-dev?si=IFhA92EqTA7bHOnf",
+    icon: <RiYoutubeLine />,
+    label: "YouTube",
+  },
+  {
+    href: "https://www.instagram.com/m0h4mm3d_hu553n/profilecard/?igsh=MWc5N3k4eXEwZnF3ZA==",
+    icon: <RiInstagramLine />,
+    label: "Instagram",
+  },
+  {
+    href: "https://www.facebook.com/mgdstudio4242?mibextid=rS40aB7S9Ucbxw6v",
+    icon: <RiFacebookBoxLine />,
+    label: "Facebook",
+  },
+  {
+    href: "https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mame4242",
+    icon: <RiLinkedinLine />,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://twitter.com/", // replace with your real profile
+    icon: <RiTwitterLine />,
+    label: "Twitter",
+  },
+];
 
 const Socials = () => {
   return (
-    <div className="flex items-center justify-center gap-x-3 sm:gap-x-5 text-[18px] sm:text-[20px] mb-[10px]">
-      <Link
-        className="hover:text-accent transition-all duration-300"
-        href="https://youtube.com/@awash-dev?si=IFhA92EqTA7bHOnf"
-        target="_blank"
-      >
-        <RiYoutubeLine />
-      </Link>
-      <Link
-        className="hover:text-accent transition-all duration-300"
-        href="https://www.instagram.com/m0h4mm3d_hu553n/profilecard/?igsh=MWc5N3k4eXEwZnF3ZA=="
-        target="_blank"
-      >
-        <RiInstagramLine />
-      </Link>
-      <Link
-        className="hover:text-accent transition-all duration-300"
-        href="https://www.facebook.com/mgdstudio4242?mibextid=rS40aB7S9Ucbxw6v"
-        target="_blank"
-      >
-        <RiFacebookBoxLine />
-      </Link>
-      <Link
-        className="hover:text-accent transition-all duration-300"
-        href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=mame4242"
-        target="_blank"
-      >
-        <RiLinkedinLine />
-      </Link>
-      <Link
-        className="hover:text-accent transition-all duration-300"
-        href="https://www.facebook.com/mgdstudio4242?mibextid=rS40aB7S9Ucbxw6v"
-        target="_blank"
-      >
-        <RiTwitterLine />
-      </Link>
+    <div className="flex flex-wrap items-center justify-center gap-5 mb-4">
+      {/* Social Icons */}
+      <div className="flex items-center gap-3 sm:gap-5 text-xl sm:text-2xl">
+        {socials.map(({ href, icon, label }) => (
+          <Link
+            key={label}
+            href={href}
+            target="_blank"
+            aria-label={label}
+            className="p-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-600 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:scale-110"
+          >
+            {icon}
+          </Link>
+        ))}
+      </div>
 
-      {/* Upwork Hire Me Button */}
+      {/* Hire Me Button */}
       <Link
         href="https://www.upwork.com/freelancers/~01b76a04c78c718c9b"
         target="_blank"
-        className="px-5 py-2.5 bg-blue-600 text-white rounded-lg text-base font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md transform hover:scale-105"
+        className="group flex items-center gap-2 px-6 py-2.5 rounded-full text-sm sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-110"
       >
+        <RiBriefcaseLine className="text-lg group-hover:rotate-12 transition-transform duration-300" />
         Hire Me
       </Link>
     </div>
