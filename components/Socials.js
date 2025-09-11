@@ -38,9 +38,9 @@ const socials = [
 
 const Socials = () => {
   return (
-    <div className="flex flex-nowrap items-center justify-between w-full overflow-x-auto py-2 gap-1">
-      {/* Social Icons - Made smaller on mobile */}
-      <div className="flex items-center gap-1 sm:gap-3 text-lg sm:text-2xl whitespace-nowrap">
+    <div className="flex items-center justify-between w-full overflow-x-auto py-2 gap-2">
+      {/* Social Icons */}
+      <div className="flex items-center gap-2 sm:gap-3 text-lg sm:text-2xl">
         {socials.map(({ href, icon, label }) => (
           <Link
             key={label}
@@ -48,23 +48,33 @@ const Socials = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={label}
-            className="p-1.5 sm:p-2 rounded-full bg-gray-100 text-gray-700 hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-600 hover:text-white transition-all duration-300 shadow-sm hover:shadow-lg transform hover:scale-110 flex-shrink-0"
+            title={label}
+            className="p-2 rounded-full bg-gray-100 text-gray-700 
+                       hover:bg-gradient-to-r hover:from-blue-500 hover:to-indigo-600 
+                       hover:text-white transition-all duration-300 
+                       shadow-sm hover:shadow-lg transform hover:scale-110 
+                       flex-shrink-0"
           >
             {icon}
           </Link>
         ))}
       </div>
 
-      {/* Hire Me Button - Made more compact on mobile */}
+      {/* Hire Me Button */}
       <Link
         href="https://www.upwork.com/freelancers/~01b76a04c78c718c9b"
         target="_blank"
         rel="noopener noreferrer"
-        className="group flex items-center gap-1 sm:gap-2 px-3 sm:px-6 py-1.5 sm:py-2.5 rounded-full text-xs sm:text-base font-semibold text-white bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg hover:from-indigo-600 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 whitespace-nowrap flex-shrink-0 ml-2"
+        className="group flex items-center gap-2 px-3 sm:px-5 py-2 rounded-full 
+                   text-sm sm:text-base font-semibold text-white 
+                   bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg 
+                   hover:from-indigo-600 hover:to-blue-500 
+                   transition-all duration-300 transform hover:scale-105 
+                   whitespace-nowrap flex-shrink-0 ml-2"
       >
-        <RiBriefcaseLine className="text-sm sm:text-lg group-hover:rotate-12 transition-transform duration-300" />
-        <span className="hidden xs:inline">Hire Me</span>
-        <span className="xs:hidden">Hire</span>
+        <RiBriefcaseLine className="text-base sm:text-lg group-hover:rotate-12 transition-transform duration-300" />
+        <span className="hidden sm:inline">Hire Me</span>
+        <span className="sm:hidden">Hire</span>
       </Link>
     </div>
   );
