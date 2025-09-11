@@ -9,7 +9,7 @@ import {
 
 const Socials = () => {
   return (
-    <div className="flex items-center justify-center gap-x-3 sm:gap-x-5 text-[18px] sm:text-[20px]">
+    <div className="flex items-center justify-center gap-x-3 sm:gap-x-5 text-[18px] sm:text-[20px] mb-[10px]">
       <Link
         className="hover:text-accent transition-all duration-300"
         href="https://youtube.com/@awash-dev?si=IFhA92EqTA7bHOnf"
@@ -50,7 +50,7 @@ const Socials = () => {
       <Link
         href="https://www.upwork.com/freelancers/~01b76a04c78c718c9b"
         target="_blank"
-        className="px-3 sm:px-4 py-2 bg-green-600 text-white rounded-full text-xs sm:text-sm font-medium hover:bg-green-700 transition-all duration-300"
+        className="px-5 py-2.5 bg-blue-600 text-white rounded-lg text-base font-semibold hover:bg-blue-700 transition-all duration-300 shadow-md transform hover:scale-105"
       >
         Hire Me
       </Link>
